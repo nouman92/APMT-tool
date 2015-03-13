@@ -1,0 +1,174 @@
+﻿<error errorId="e8bf54c4-beae-4a4e-b400-5949abdc1052" host="INSPIRON-1564" type="System.InvalidOperationException" message="The IControllerFactory 'UserInterface.Controllers.ControllerFactory.NinjectControllerFactory' did not return a controller for the name 'Scripts'." source="System.Web.Mvc" detail="System.InvalidOperationException: The IControllerFactory 'UserInterface.Controllers.ControllerFactory.NinjectControllerFactory' did not return a controller for the name 'Scripts'.&#xD;&#xA;   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController&amp; controller, IControllerFactory&amp; factory)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" time="2011-03-11T13:03:13.0444265Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:no-cache&#xD;&#xA;HTTP_CONNECTION:Keep-Alive, TE&#xD;&#xA;HTTP_ACCEPT:text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1&#xD;&#xA;HTTP_ACCEPT_CHARSET:iso-8859-1, utf-8, utf-16, *;q=0.1&#xD;&#xA;HTTP_ACCEPT_ENCODING:deflate, gzip, x-gzip, identity, *;q=0&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.9&#xD;&#xA;HTTP_COOKIE:ASP.NET_SessionId=r20qwgpfv1c1dkj0d4kvro5x&#xD;&#xA;HTTP_HOST:localhost:58822&#xD;&#xA;HTTP_REFERER:http://localhost:58822/Project/ProjectTabs&#xD;&#xA;HTTP_TE:deflate, gzip, chunked, identity, trailers&#xD;&#xA;HTTP_USER_AGENT:Opera/9.80 (Windows NT 6.1; U; en) Presto/2.7.62 Version/11.00&#xD;&#xA;HTTP_COOKIE2:$Version=1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: no-cache&#xD;&#xA;Connection: Keep-Alive, TE&#xD;&#xA;Accept: text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1&#xD;&#xA;Accept-Charset: iso-8859-1, utf-8, utf-16, *;q=0.1&#xD;&#xA;Accept-Encoding: deflate, gzip, x-gzip, identity, *;q=0&#xD;&#xA;Accept-Language: en-US,en;q=0.9&#xD;&#xA;Cookie: ASP.NET_SessionId=r20qwgpfv1c1dkj0d4kvro5x&#xD;&#xA;Host: localhost:58822&#xD;&#xA;Referer: http://localhost:58822/Project/ProjectTabs&#xD;&#xA;TE: deflate, gzip, chunked, identity, trailers&#xD;&#xA;User-Agent: Opera/9.80 (Windows NT 6.1; U; en) Presto/2.7.62 Version/11.00&#xD;&#xA;Cookie2: $Version=1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\Users\ahsan\Documents\Visual Studio 2010\Projects\APM Tool\Back up\APM Tool\UserInterface\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="Inspiron-1564\ahsan" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="" />
+    </item>
+    <item name="HTTPS">
+      <value string="" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Scripts/MicrosofMvctAjax.js" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\Users\ahsan\Documents\Visual Studio 2010\Projects\APM Tool\Back up\APM Tool\UserInterface\Scripts\MicrosofMvctAjax.js" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Scripts/MicrosofMvctAjax.js" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="58822" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="" />
+    </item>
+    <item name="URL">
+      <value string="/Scripts/MicrosofMvctAjax.js" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="no-cache" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="Keep-Alive, TE" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1" />
+    </item>
+    <item name="HTTP_ACCEPT_CHARSET">
+      <value string="iso-8859-1, utf-8, utf-16, *;q=0.1" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="deflate, gzip, x-gzip, identity, *;q=0" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.9" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="ASP.NET_SessionId=r20qwgpfv1c1dkj0d4kvro5x" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:58822" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:58822/Project/ProjectTabs" />
+    </item>
+    <item name="HTTP_TE">
+      <value string="deflate, gzip, chunked, identity, trailers" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Opera/9.80 (Windows NT 6.1; U; en) Presto/2.7.62 Version/11.00" />
+    </item>
+    <item name="HTTP_COOKIE2">
+      <value string="$Version=1" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="ASP.NET_SessionId">
+      <value string="r20qwgpfv1c1dkj0d4kvro5x" />
+    </item>
+  </cookies>
+</error>

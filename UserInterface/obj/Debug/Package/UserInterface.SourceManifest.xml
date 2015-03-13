@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\ahsan\Documents\Visual Studio 2010\Projects\APM Tool\Back up\APM Tool 14 May 2011 12-03 AM\APM Tool\UserInterface\obj\Debug\Package\PackageTmp" managedRuntimeVersion="v4.0" />
+  <setAcl path="C:\Users\ahsan\Documents\Visual Studio 2010\Projects\APM Tool\Back up\APM Tool 14 May 2011 12-03 AM\APM Tool\UserInterface\obj\Debug\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\ahsan\Documents\Visual Studio 2010\Projects\APM Tool\Back up\APM Tool 14 May 2011 12-03 AM\APM Tool\UserInterface\obj\Debug\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>

@@ -1,0 +1,174 @@
+﻿<error errorId="33ff42e3-179e-4b7e-92e5-a2019aba78a0" host="INSPIRON-1564" type="System.NullReferenceException" message="Object reference not set to an instance of an object." source="App_Web_izuurzty" detail="System.Web.HttpException (0x80004005): Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerWrapper'. ---&gt; System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---&gt; System.NullReferenceException: Object reference not set to an instance of an object.&#xD;&#xA;   at ASP.views_project_moreactionstabs_aspx.__RenderContent2(HtmlTextWriter __w, Control parameterContainer) in c:\Users\ahsan\Documents\Visual Studio 2010\Projects\APM Tool\Back up\APM Tool\UserInterface\Views\Project\MoreActionsTabs.aspx:line 32&#xD;&#xA;   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)&#xD;&#xA;   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)&#xD;&#xA;   at System.Web.UI.Control.Render(HtmlTextWriter writer)&#xD;&#xA;   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)&#xD;&#xA;   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)&#xD;&#xA;   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)&#xD;&#xA;   at ASP.views_shared_site_master.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in c:\Users\ahsan\Documents\Visual Studio 2010\Projects\APM Tool\Back up\APM Tool\UserInterface\Views\Shared\Site.Master:line 91&#xD;&#xA;   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)&#xD;&#xA;   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)&#xD;&#xA;   at System.Web.UI.Control.Render(HtmlTextWriter writer)&#xD;&#xA;   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)&#xD;&#xA;   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)&#xD;&#xA;   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)&#xD;&#xA;   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)&#xD;&#xA;   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)&#xD;&#xA;   at System.Web.UI.Page.Render(HtmlTextWriter writer)&#xD;&#xA;   at System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)&#xD;&#xA;   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)&#xD;&#xA;   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)&#xD;&#xA;   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)&#xD;&#xA;   at System.Web.UI.Page.HandleError(Exception e)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequest()&#xD;&#xA;   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequest(HttpContext context)&#xD;&#xA;   at System.Web.Mvc.ViewPage.ProcessRequest(HttpContext context)&#xD;&#xA;   at ASP.views_project_moreactionstabs_aspx.ProcessRequest(HttpContext context) in c:\Users\ahsan\AppData\Local\Temp\Temporary ASP.NET Files\root\d51a0f2f\119a97f5\App_Web_izuurzty.16.cs:line 0&#xD;&#xA;   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.&lt;&gt;c__DisplayClass1.&lt;ProcessRequest&gt;b__0()&#xD;&#xA;   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.&lt;&gt;c__DisplayClass4.&lt;Wrap&gt;b__3()&#xD;&#xA;   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap[TResult](Func`1 func)&#xD;&#xA;   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap(Action action)&#xD;&#xA;   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.ProcessRequest(HttpContext context)&#xD;&#xA;   at System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)&#xD;&#xA;   at System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)&#xD;&#xA;   at System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage)&#xD;&#xA;   at System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm)&#xD;&#xA;   at System.Web.HttpServerUtilityWrapper.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm)&#xD;&#xA;   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)&#xD;&#xA;   at System.Web.Mvc.WebFormView.RenderViewPage(ViewContext context, ViewPage page)&#xD;&#xA;   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer)&#xD;&#xA;   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass14.&lt;InvokeActionResultWithFilters&gt;b__11()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass14.&lt;&gt;c__DisplayClass16.&lt;InvokeActionResultWithFilters&gt;b__13()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)&#xD;&#xA;   at System.Web.Mvc.Controller.ExecuteCore()&#xD;&#xA;   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClass8.&lt;BeginProcessRequest&gt;b__4()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass1.&lt;MakeVoidDelegate&gt;b__0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass8`1.&lt;BeginSynchronous&gt;b__7(IAsyncResult _)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" time="2011-03-11T14:54:06.6755569Z" statusCode="500" webHostHtmlMessage="&lt;html&gt;&#xD;&#xA;    &lt;head&gt;&#xD;&#xA;        &lt;title&gt;Object reference not set to an instance of an object.&lt;/title&gt;&#xD;&#xA;        &lt;style&gt;&#xD;&#xA;         body {font-family:&quot;Verdana&quot;;font-weight:normal;font-size: .7em;color:black;} &#xD;&#xA;         p {font-family:&quot;Verdana&quot;;font-weight:normal;color:black;margin-top: -5px}&#xD;&#xA;         b {font-family:&quot;Verdana&quot;;font-weight:bold;color:black;margin-top: -5px}&#xD;&#xA;         H1 { font-family:&quot;Verdana&quot;;font-weight:normal;font-size:18pt;color:red }&#xD;&#xA;         H2 { font-family:&quot;Verdana&quot;;font-weight:normal;font-size:14pt;color:maroon }&#xD;&#xA;         pre {font-family:&quot;Lucida Console&quot;;font-size: .9em}&#xD;&#xA;         .marker {font-weight: bold; color: black;text-decoration: none;}&#xD;&#xA;         .version {color: gray;}&#xD;&#xA;         .error {margin-bottom: 10px;}&#xD;&#xA;         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }&#xD;&#xA;        &lt;/style&gt;&#xD;&#xA;    &lt;/head&gt;&#xD;&#xA;&#xD;&#xA;    &lt;body bgcolor=&quot;white&quot;&gt;&#xD;&#xA;&#xD;&#xA;            &lt;span&gt;&lt;H1&gt;Server Error in '/' Application.&lt;hr width=100% size=1 color=silver&gt;&lt;/H1&gt;&#xD;&#xA;&#xD;&#xA;            &lt;h2&gt; &lt;i&gt;Object reference not set to an instance of an object.&lt;/i&gt; &lt;/h2&gt;&lt;/span&gt;&#xD;&#xA;&#xD;&#xA;            &lt;font face=&quot;Arial, Helvetica, Geneva, SunSans-Regular, sans-serif &quot;&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Description: &lt;/b&gt;An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code.&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Exception Details: &lt;/b&gt;System.NullReferenceException: Object reference not set to an instance of an object.&lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt;Source Error:&lt;/b&gt; &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;table width=100% bgcolor=&quot;#ffffcc&quot;&gt;&#xD;&#xA;               &lt;tr&gt;&#xD;&#xA;                  &lt;td&gt;&#xD;&#xA;                      &lt;code&gt;&lt;pre&gt;&#xD;&#xA;&#xD;&#xA;Line 30:     &amp;lt;div id=&amp;quot;moreActionsTabs&amp;quot; class=&amp;quot;spacing&amp;quot;&amp;gt;&#xD;&#xA;Line 31:          &amp;lt;ul&amp;gt;&#xD;&#xA;&lt;font color=red&gt;Line 32:              &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#39;&amp;lt;%: Url.Action(&amp;quot;DisplayProject&amp;quot;, &amp;quot;Project&amp;quot;, new { pProjectID = (int)Session[&amp;quot;projectID&amp;quot;] }) %&amp;gt;&amp;#39;&amp;gt;&amp;lt;span&amp;gt;Project Details&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&#xD;&#xA;&lt;/font&gt;Line 33:              &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#39;&amp;lt;%: Url.Action(&amp;quot;ProjectBacklog&amp;quot;, &amp;quot;Project&amp;quot;) %&amp;gt;&amp;#39;&amp;gt;&amp;lt;span&amp;gt;Project Backlog&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&#xD;&#xA;Line 34:              &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#39;&amp;lt;%: Url.Action(&amp;quot;ProjectRisks&amp;quot;, &amp;quot;Project&amp;quot;) %&amp;gt;&amp;#39;&amp;gt;&amp;lt;span&amp;gt;Project Risks&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/pre&gt;&lt;/code&gt;&#xD;&#xA;&#xD;&#xA;                  &lt;/td&gt;&#xD;&#xA;               &lt;/tr&gt;&#xD;&#xA;            &lt;/table&gt;&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Source File: &lt;/b&gt; c:\Users\ahsan\Documents\Visual Studio 2010\Projects\APM Tool\Back up\APM Tool\UserInterface\Views\Project\MoreActionsTabs.aspx&lt;b&gt; &amp;nbsp;&amp;nbsp; Line: &lt;/b&gt; 32&#xD;&#xA;            &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt;Stack Trace:&lt;/b&gt; &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;table width=100% bgcolor=&quot;#ffffcc&quot;&gt;&#xD;&#xA;               &lt;tr&gt;&#xD;&#xA;                  &lt;td&gt;&#xD;&#xA;                      &lt;code&gt;&lt;pre&gt;&#xD;&#xA;&#xD;&#xA;[NullReferenceException: Object reference not set to an instance of an object.]&#xD;&#xA;   ASP.views_project_moreactionstabs_aspx.__RenderContent2(HtmlTextWriter __w, Control parameterContainer) in c:\Users\ahsan\Documents\Visual Studio 2010\Projects\APM Tool\Back up\APM Tool\UserInterface\Views\Project\MoreActionsTabs.aspx:32&#xD;&#xA;   System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children) +109&#xD;&#xA;   System.Web.UI.Control.RenderChildren(HtmlTextWriter writer) +8&#xD;&#xA;   System.Web.UI.Control.Render(HtmlTextWriter writer) +10&#xD;&#xA;   System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter) +27&#xD;&#xA;   System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter) +100&#xD;&#xA;   System.Web.UI.Control.RenderControl(HtmlTextWriter writer) +25&#xD;&#xA;   ASP.views_shared_site_master.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in c:\Users\ahsan\Documents\Visual Studio 2010\Projects\APM Tool\Back up\APM Tool\UserInterface\Views\Shared\Site.Master:91&#xD;&#xA;   System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children) +109&#xD;&#xA;   System.Web.UI.Control.RenderChildren(HtmlTextWriter writer) +8&#xD;&#xA;   System.Web.UI.Control.Render(HtmlTextWriter writer) +10&#xD;&#xA;   System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter) +27&#xD;&#xA;   System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter) +100&#xD;&#xA;   System.Web.UI.Control.RenderControl(HtmlTextWriter writer) +25&#xD;&#xA;   System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children) +208&#xD;&#xA;   System.Web.UI.Control.RenderChildren(HtmlTextWriter writer) +8&#xD;&#xA;   System.Web.UI.Page.Render(HtmlTextWriter writer) +29&#xD;&#xA;   System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer) +56&#xD;&#xA;   System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter) +27&#xD;&#xA;   System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter) +100&#xD;&#xA;   System.Web.UI.Control.RenderControl(HtmlTextWriter writer) +25&#xD;&#xA;   System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) +3060&#xD;&#xA;&lt;/pre&gt;&lt;/code&gt;&#xD;&#xA;&#xD;&#xA;                  &lt;/td&gt;&#xD;&#xA;               &lt;/tr&gt;&#xD;&#xA;            &lt;/table&gt;&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&#xD;&#xA;&#xD;&#xA;    &lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&#xD;&#xA;">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:no-cache&#xD;&#xA;HTTP_CONNECTION:Keep-Alive, TE&#xD;&#xA;HTTP_ACCEPT:text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1&#xD;&#xA;HTTP_ACCEPT_CHARSET:iso-8859-1, utf-8, utf-16, *;q=0.1&#xD;&#xA;HTTP_ACCEPT_ENCODING:deflate, gzip, x-gzip, identity, *;q=0&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.9&#xD;&#xA;HTTP_COOKIE:ASP.NET_SessionId=r20qwgpfv1c1dkj0d4kvro5x&#xD;&#xA;HTTP_HOST:localhost:58822&#xD;&#xA;HTTP_REFERER:http://localhost:58822/Project/MoreActionsTabs&#xD;&#xA;HTTP_TE:deflate, gzip, chunked, identity, trailers&#xD;&#xA;HTTP_USER_AGENT:Opera/9.80 (Windows NT 6.1; U; en) Presto/2.7.62 Version/11.00&#xD;&#xA;HTTP_COOKIE2:$Version=1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: no-cache&#xD;&#xA;Connection: Keep-Alive, TE&#xD;&#xA;Accept: text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1&#xD;&#xA;Accept-Charset: iso-8859-1, utf-8, utf-16, *;q=0.1&#xD;&#xA;Accept-Encoding: deflate, gzip, x-gzip, identity, *;q=0&#xD;&#xA;Accept-Language: en-US,en;q=0.9&#xD;&#xA;Cookie: ASP.NET_SessionId=r20qwgpfv1c1dkj0d4kvro5x&#xD;&#xA;Host: localhost:58822&#xD;&#xA;Referer: http://localhost:58822/Project/MoreActionsTabs&#xD;&#xA;TE: deflate, gzip, chunked, identity, trailers&#xD;&#xA;User-Agent: Opera/9.80 (Windows NT 6.1; U; en) Presto/2.7.62 Version/11.00&#xD;&#xA;Cookie2: $Version=1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\Users\ahsan\Documents\Visual Studio 2010\Projects\APM Tool\Back up\APM Tool\UserInterface\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="Inspiron-1564\ahsan" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="" />
+    </item>
+    <item name="HTTPS">
+      <value string="" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Project/MoreActionsTabs" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\Users\ahsan\Documents\Visual Studio 2010\Projects\APM Tool\Back up\APM Tool\UserInterface\Project\MoreActionsTabs" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Project/MoreActionsTabs" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="58822" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="" />
+    </item>
+    <item name="URL">
+      <value string="/Project/MoreActionsTabs" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="no-cache" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="Keep-Alive, TE" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1" />
+    </item>
+    <item name="HTTP_ACCEPT_CHARSET">
+      <value string="iso-8859-1, utf-8, utf-16, *;q=0.1" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="deflate, gzip, x-gzip, identity, *;q=0" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.9" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="ASP.NET_SessionId=r20qwgpfv1c1dkj0d4kvro5x" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:58822" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:58822/Project/MoreActionsTabs" />
+    </item>
+    <item name="HTTP_TE">
+      <value string="deflate, gzip, chunked, identity, trailers" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Opera/9.80 (Windows NT 6.1; U; en) Presto/2.7.62 Version/11.00" />
+    </item>
+    <item name="HTTP_COOKIE2">
+      <value string="$Version=1" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="ASP.NET_SessionId">
+      <value string="r20qwgpfv1c1dkj0d4kvro5x" />
+    </item>
+  </cookies>
+</error>

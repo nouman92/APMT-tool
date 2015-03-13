@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="CString-Web.config Connection String" description="CString Connection String used in web.config by the application to access the database." defaultvalue="Data Source=INSPIRON-1564;Initial Catalog=APMT;Integrated Security=True; User Id=; Password=" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CString']/@connectionString" />
+  </parameter>
+</parameters>

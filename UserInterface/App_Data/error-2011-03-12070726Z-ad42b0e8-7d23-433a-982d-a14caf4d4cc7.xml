@@ -1,0 +1,179 @@
+﻿<error errorId="ad42b0e8-7d23-433a-982d-a14caf4d4cc7" host="INSPIRON-1564" type="System.IO.FileNotFoundException" message="Cannot locate error file for error with ID 919d0146-01c6-4448-b0ad-949993176302." source="Elmah" detail="System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---&gt; System.IO.FileNotFoundException: Cannot locate error file for error with ID 919d0146-01c6-4448-b0ad-949993176302.&#xD;&#xA;   at Elmah.XmlFileErrorLog.GetError(String id) in c:\dev\pub\ELMAH-1.2-BETA.dist\src\Elmah\XmlFileErrorLog.cs:line 250&#xD;&#xA;   at Elmah.ErrorDetailPage.OnLoad(EventArgs e) in c:\dev\pub\ELMAH-1.2-BETA.dist\src\Elmah\ErrorDetailPage.cs:line 62&#xD;&#xA;   at System.Web.UI.Control.LoadRecursive()&#xD;&#xA;   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)&#xD;&#xA;   at System.Web.UI.Page.HandleError(Exception e)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequest()&#xD;&#xA;   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequest(HttpContext context)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" time="2011-03-12T07:07:26.5324959Z" statusCode="500" webHostHtmlMessage="&lt;html&gt;&#xD;&#xA;    &lt;head&gt;&#xD;&#xA;        &lt;title&gt;Cannot locate error file for error with ID 919d0146-01c6-4448-b0ad-949993176302.&lt;/title&gt;&#xD;&#xA;        &lt;style&gt;&#xD;&#xA;         body {font-family:&quot;Verdana&quot;;font-weight:normal;font-size: .7em;color:black;} &#xD;&#xA;         p {font-family:&quot;Verdana&quot;;font-weight:normal;color:black;margin-top: -5px}&#xD;&#xA;         b {font-family:&quot;Verdana&quot;;font-weight:bold;color:black;margin-top: -5px}&#xD;&#xA;         H1 { font-family:&quot;Verdana&quot;;font-weight:normal;font-size:18pt;color:red }&#xD;&#xA;         H2 { font-family:&quot;Verdana&quot;;font-weight:normal;font-size:14pt;color:maroon }&#xD;&#xA;         pre {font-family:&quot;Lucida Console&quot;;font-size: .9em}&#xD;&#xA;         .marker {font-weight: bold; color: black;text-decoration: none;}&#xD;&#xA;         .version {color: gray;}&#xD;&#xA;         .error {margin-bottom: 10px;}&#xD;&#xA;         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }&#xD;&#xA;        &lt;/style&gt;&#xD;&#xA;    &lt;/head&gt;&#xD;&#xA;&#xD;&#xA;    &lt;body bgcolor=&quot;white&quot;&gt;&#xD;&#xA;&#xD;&#xA;            &lt;span&gt;&lt;H1&gt;Server Error in '/' Application.&lt;hr width=100% size=1 color=silver&gt;&lt;/H1&gt;&#xD;&#xA;&#xD;&#xA;            &lt;h2&gt; &lt;i&gt;Cannot locate error file for error with ID 919d0146-01c6-4448-b0ad-949993176302.&lt;/i&gt; &lt;/h2&gt;&lt;/span&gt;&#xD;&#xA;&#xD;&#xA;            &lt;font face=&quot;Arial, Helvetica, Geneva, SunSans-Regular, sans-serif &quot;&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Description: &lt;/b&gt;An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code.&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Exception Details: &lt;/b&gt;System.IO.FileNotFoundException: Cannot locate error file for error with ID 919d0146-01c6-4448-b0ad-949993176302.&lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt;Source Error:&lt;/b&gt; &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;table width=100% bgcolor=&quot;#ffffcc&quot;&gt;&#xD;&#xA;               &lt;tr&gt;&#xD;&#xA;                  &lt;td&gt;&#xD;&#xA;                      &lt;code&gt;&#xD;&#xA;&#xD;&#xA;An unhandled exception was generated during the execution of the current web request. Information regarding the origin and location of the exception can be identified using the exception stack trace below.&lt;/code&gt;&#xD;&#xA;&#xD;&#xA;                  &lt;/td&gt;&#xD;&#xA;               &lt;/tr&gt;&#xD;&#xA;            &lt;/table&gt;&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt;Stack Trace:&lt;/b&gt; &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;table width=100% bgcolor=&quot;#ffffcc&quot;&gt;&#xD;&#xA;               &lt;tr&gt;&#xD;&#xA;                  &lt;td&gt;&#xD;&#xA;                      &lt;code&gt;&lt;pre&gt;&#xD;&#xA;&#xD;&#xA;[FileNotFoundException: Cannot locate error file for error with ID 919d0146-01c6-4448-b0ad-949993176302.]&#xD;&#xA;   Elmah.XmlFileErrorLog.GetError(String id) in c:\dev\pub\ELMAH-1.2-BETA.dist\src\Elmah\XmlFileErrorLog.cs:250&#xD;&#xA;   Elmah.ErrorDetailPage.OnLoad(EventArgs e) in c:\dev\pub\ELMAH-1.2-BETA.dist\src\Elmah\ErrorDetailPage.cs:62&#xD;&#xA;   System.Web.UI.Control.LoadRecursive() +74&#xD;&#xA;   System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) +2207&#xD;&#xA;&lt;/pre&gt;&lt;/code&gt;&#xD;&#xA;&#xD;&#xA;                  &lt;/td&gt;&#xD;&#xA;               &lt;/tr&gt;&#xD;&#xA;            &lt;/table&gt;&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&#xD;&#xA;&#xD;&#xA;    &lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&#xD;&#xA;">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:no-cache&#xD;&#xA;HTTP_CONNECTION:Keep-Alive, TE&#xD;&#xA;HTTP_ACCEPT:text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1&#xD;&#xA;HTTP_ACCEPT_CHARSET:iso-8859-1, utf-8, utf-16, *;q=0.1&#xD;&#xA;HTTP_ACCEPT_ENCODING:deflate, gzip, x-gzip, identity, *;q=0&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.9&#xD;&#xA;HTTP_COOKIE:ASP.NET_SessionId=bhw3jjuaxjnhkgm4u4emppst&#xD;&#xA;HTTP_HOST:localhost:58822&#xD;&#xA;HTTP_REFERER:http://localhost:58822/elmah.axd&#xD;&#xA;HTTP_TE:deflate, gzip, chunked, identity, trailers&#xD;&#xA;HTTP_USER_AGENT:Opera/9.80 (Windows NT 6.1; U; en) Presto/2.7.62 Version/11.00&#xD;&#xA;HTTP_COOKIE2:$Version=1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: no-cache&#xD;&#xA;Connection: Keep-Alive, TE&#xD;&#xA;Accept: text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1&#xD;&#xA;Accept-Charset: iso-8859-1, utf-8, utf-16, *;q=0.1&#xD;&#xA;Accept-Encoding: deflate, gzip, x-gzip, identity, *;q=0&#xD;&#xA;Accept-Language: en-US,en;q=0.9&#xD;&#xA;Cookie: ASP.NET_SessionId=bhw3jjuaxjnhkgm4u4emppst&#xD;&#xA;Host: localhost:58822&#xD;&#xA;Referer: http://localhost:58822/elmah.axd&#xD;&#xA;TE: deflate, gzip, chunked, identity, trailers&#xD;&#xA;User-Agent: Opera/9.80 (Windows NT 6.1; U; en) Presto/2.7.62 Version/11.00&#xD;&#xA;Cookie2: $Version=1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\Users\ahsan\Documents\Visual Studio 2010\Projects\APM Tool\Back up\APM Tool\UserInterface\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="Inspiron-1564\ahsan" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="" />
+    </item>
+    <item name="HTTPS">
+      <value string="" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/elmah.axd/detail" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\Users\ahsan\Documents\Visual Studio 2010\Projects\APM Tool\Back up\APM Tool\UserInterface\elmah.axd" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="id=919d0146-01c6-4448-b0ad-949993176302" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/elmah.axd" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="58822" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="" />
+    </item>
+    <item name="URL">
+      <value string="/elmah.axd" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="no-cache" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="Keep-Alive, TE" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1" />
+    </item>
+    <item name="HTTP_ACCEPT_CHARSET">
+      <value string="iso-8859-1, utf-8, utf-16, *;q=0.1" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="deflate, gzip, x-gzip, identity, *;q=0" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.9" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="ASP.NET_SessionId=bhw3jjuaxjnhkgm4u4emppst" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:58822" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:58822/elmah.axd" />
+    </item>
+    <item name="HTTP_TE">
+      <value string="deflate, gzip, chunked, identity, trailers" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Opera/9.80 (Windows NT 6.1; U; en) Presto/2.7.62 Version/11.00" />
+    </item>
+    <item name="HTTP_COOKIE2">
+      <value string="$Version=1" />
+    </item>
+  </serverVariables>
+  <queryString>
+    <item name="id">
+      <value string="919d0146-01c6-4448-b0ad-949993176302" />
+    </item>
+  </queryString>
+  <cookies>
+    <item name="ASP.NET_SessionId">
+      <value string="bhw3jjuaxjnhkgm4u4emppst" />
+    </item>
+  </cookies>
+</error>

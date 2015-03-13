@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head runat="server">
+    <link rel = "Stylesheet" href = "../../Content/Tabs.css"/>
+        <title><asp:ContentPlaceHolder ID="titleContent" runat="server" /></title>
+
+        <script type="text/javascript">
+
+            $(function () {
+                $("[title]").tooltip({
+                    open: function () {
+                        var tooltip = $(this).tooltip("widget");
+                        $(document).mousemove(function (event) {
+                            tooltip.position({
+                                my: "left center",
+                                at: "right center",
+                                offset: "25 25",
+                                of: event
+                            });
+                        })
+                        // trigger once to override element-relative positioning
+				.mousemove();
+                    },
+                    close: function () {
+                        $(document).unbind("mousemove");
+                    }
+                });
+            });
+
+        </script>
+ 
+    </head>
+    
+    <body>
+    
+        <div id="bodyPlaceHolder">
+            <asp:ContentPlaceHolder ID="body" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+    
+    </body>
+
+</html>
+
+

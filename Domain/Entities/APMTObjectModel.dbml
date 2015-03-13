@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="APMT" Class="APMTObjectModelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=INSPIRON-1564;Initial Catalog=APMT;Integrated Security=True" SettingsObjectName="Domain.Properties.Settings" SettingsPropertyName="APMTConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AccessRights" Member="AccessRights">
+    <Type Name="AccessRight">
+      <Column Name="RightID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="AccessRight_RoleRight" Member="RoleRights" ThisKey="RightID" OtherKey="RightID" Type="RoleRight" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AssignedIssues" Member="AssignedIssues">
+    <Type Name="AssignedIssue">
+      <Column Name="EmpID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IssueID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Employee_AssignedIssue" Member="Employee" ThisKey="EmpID" OtherKey="EmpID" Type="Employee" IsForeignKey="true" />
+      <Association Name="Issue_AssignedIssue" Member="Issue" ThisKey="IssueID" OtherKey="IssueID" Type="Issue" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CompAttributes" Member="CompAttributes">
+    <Type Name="CompAttribute">
+      <Column Name="CompAttID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompAttName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="FieldType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DefaultValue" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CanNull" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RegularExpression" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsSystemLevel" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CompAttribute_CompAttValue" Member="CompAttValues" ThisKey="CompAttID" OtherKey="CompAttID" Type="CompAttValue" />
+      <Association Name="FieldType_CompAttribute" Member="FieldType1" ThisKey="FieldType" OtherKey="FieldID" Type="FieldType" IsForeignKey="true" />
+      <Association Name="RegularExpression_CompAttribute" Member="RegularExpression1" ThisKey="RegularExpression" OtherKey="ExpressionID" Type="RegularExpression" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CompAttValues" Member="CompAttValues">
+    <Type Name="CompAttValue">
+      <Column Name="CompID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CompAttID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="CompAttribute_CompAttValue" Member="CompAttribute" ThisKey="CompAttID" OtherKey="CompAttID" Type="CompAttribute" IsForeignKey="true" />
+      <Association Name="Component_CompAttValue" Member="Component" ThisKey="CompID" OtherKey="CompID" Type="Component" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Components" Member="Components">
+    <Type Name="Component">
+      <Column Name="CompID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="Component_CompAttValue" Member="CompAttValues" ThisKey="CompID" OtherKey="CompID" Type="CompAttValue" />
+      <Association Name="Component_SubComponent" Member="SubComponents" ThisKey="CompID" OtherKey="CompID" Type="SubComponent" />
+      <Association Name="Project_Component" Member="Project" ThisKey="ProjID" OtherKey="ProjID" Type="Project" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmpAttributes" Member="EmpAttributes">
+    <Type Name="EmpAttribute">
+      <Column Name="EmpAttID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmpAttName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="FieldType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DefaultValue" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CanNull" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RegularExpression" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsSystemLevel" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="EmpAttribute_EmpAttValue" Member="EmpAttValues" ThisKey="EmpAttID" OtherKey="EmpAttID" Type="EmpAttValue" />
+      <Association Name="FieldType_EmpAttribute" Member="FieldType1" ThisKey="FieldType" OtherKey="FieldID" Type="FieldType" IsForeignKey="true" />
+      <Association Name="RegularExpression_EmpAttribute" Member="RegularExpression1" ThisKey="RegularExpression" OtherKey="ExpressionID" Type="RegularExpression" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmpAttValues" Member="EmpAttValues">
+    <Type Name="EmpAttValue">
+      <Column Name="EmpID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EmpAttID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="EmpAttribute_EmpAttValue" Member="EmpAttribute" ThisKey="EmpAttID" OtherKey="EmpAttID" Type="EmpAttribute" IsForeignKey="true" />
+      <Association Name="Employee_EmpAttValue" Member="Employee" ThisKey="EmpID" OtherKey="EmpID" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employees" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="EmpID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Employee_AssignedIssue" Member="AssignedIssues" ThisKey="EmpID" OtherKey="EmpID" Type="AssignedIssue" />
+      <Association Name="Employee_EmpAttValue" Member="EmpAttValues" ThisKey="EmpID" OtherKey="EmpID" Type="EmpAttValue" />
+      <Association Name="Employee_FavoriteProject" Member="FavoriteProjects" ThisKey="EmpID" OtherKey="EmpID" Type="FavoriteProject" />
+      <Association Name="Employee_MeetingDetail" Member="MeetingDetails" ThisKey="EmpID" OtherKey="EmpID" Type="MeetingDetail" />
+      <Association Name="Employee_PersonalNote" Member="PersonalNotes" ThisKey="EmpID" OtherKey="EmpID" Type="PersonalNote" />
+      <Association Name="Employee_SearchFilter" Member="SearchFilters" ThisKey="EmpID" OtherKey="EmpID" Type="SearchFilter" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FavoriteProjects" Member="FavoriteProjects">
+    <Type Name="FavoriteProject">
+      <Column Name="EmpID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProjID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Employee_FavoriteProject" Member="Employee" ThisKey="EmpID" OtherKey="EmpID" Type="Employee" IsForeignKey="true" />
+      <Association Name="Project_FavoriteProject" Member="Project" ThisKey="ProjID" OtherKey="ProjID" Type="Project" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FieldTypes" Member="FieldTypes">
+    <Type Name="FieldType">
+      <Column Name="FieldID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FieldName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="FieldType_CompAttribute" Member="CompAttributes" ThisKey="FieldID" OtherKey="FieldType" Type="CompAttribute" />
+      <Association Name="FieldType_EmpAttribute" Member="EmpAttributes" ThisKey="FieldID" OtherKey="FieldType" Type="EmpAttribute" />
+      <Association Name="FieldType_IssueAttribute" Member="IssueAttributes" ThisKey="FieldID" OtherKey="FieldType" Type="IssueAttribute" />
+      <Association Name="FieldType_OrgAttribute" Member="OrgAttributes" ThisKey="FieldID" OtherKey="FieldType" Type="OrgAttribute" />
+      <Association Name="FieldType_ProjAttribute" Member="ProjAttributes" ThisKey="FieldID" OtherKey="FieldType" Type="ProjAttribute" />
+      <Association Name="FieldType_SprintAttribute" Member="SprintAttributes" ThisKey="FieldID" OtherKey="FieldType" Type="SprintAttribute" />
+      <Association Name="FieldType_SubCompAttribute" Member="SubCompAttributes" ThisKey="FieldID" OtherKey="FieldType" Type="SubCompAttribute" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IssueAttributes" Member="IssueAttributes">
+    <Type Name="IssueAttribute">
+      <Column Name="IssueAttID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IssueAttName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="FieldType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DefaultValue" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CanNull" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RegularExpression" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsSystemLevel" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="IssueAttribute_IssueAttValue" Member="IssueAttValues" ThisKey="IssueAttID" OtherKey="IssueAttID" Type="IssueAttValue" />
+      <Association Name="FieldType_IssueAttribute" Member="FieldType1" ThisKey="FieldType" OtherKey="FieldID" Type="FieldType" IsForeignKey="true" />
+      <Association Name="RegularExpression_IssueAttribute" Member="RegularExpression1" ThisKey="RegularExpression" OtherKey="ExpressionID" Type="RegularExpression" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IssueAttValues" Member="IssueAttValues">
+    <Type Name="IssueAttValue">
+      <Column Name="IssueID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IssueAttID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="IssueAttribute_IssueAttValue" Member="IssueAttribute" ThisKey="IssueAttID" OtherKey="IssueAttID" Type="IssueAttribute" IsForeignKey="true" />
+      <Association Name="Issue_IssueAttValue" Member="Issue" ThisKey="IssueID" OtherKey="IssueID" Type="Issue" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IssuePriorities" Member="IssuePriorities">
+    <Type Name="IssuePriority">
+      <Column Name="PriorityID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriorityName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="IssuePriority_Issue" Member="Issues" ThisKey="PriorityID" OtherKey="PriorityID" Type="Issue" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Issues" Member="Issues">
+    <Type Name="Issue">
+      <Column Name="IssueID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StateID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PriorityID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Issue_AssignedIssue" Member="AssignedIssues" ThisKey="IssueID" OtherKey="IssueID" Type="AssignedIssue" />
+      <Association Name="Issue_IssueAttValue" Member="IssueAttValues" ThisKey="IssueID" OtherKey="IssueID" Type="IssueAttValue" />
+      <Association Name="Issue_IssuesDependency" Member="IssuesDependencies" ThisKey="IssueID" OtherKey="IssueID" Type="IssuesDependency" />
+      <Association Name="Issue_IssuesDependency1" Member="IssuesDependencies1" ThisKey="IssueID" OtherKey="DependsOn" Type="IssuesDependency" />
+      <Association Name="Issue_ProjectsBacklog" Member="ProjectsBacklogs" ThisKey="IssueID" OtherKey="IssueID" Type="ProjectsBacklog" />
+      <Association Name="Issue_SprintsBacklog" Member="SprintsBacklogs" ThisKey="IssueID" OtherKey="IssueID" Type="SprintsBacklog" />
+      <Association Name="IssuePriority_Issue" Member="IssuePriority" ThisKey="PriorityID" OtherKey="PriorityID" Type="IssuePriority" IsForeignKey="true" />
+      <Association Name="IssueType_Issue" Member="IssueType" ThisKey="TypeID" OtherKey="TypeID" Type="IssueType" IsForeignKey="true" />
+      <Association Name="IssueWorkFlow_Issue" Member="IssueWorkFlow" ThisKey="StateID" OtherKey="StateID" Type="IssueWorkFlow" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IssuesDependency" Member="IssuesDependencies">
+    <Type Name="IssuesDependency">
+      <Column Name="IssueID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DependsOn" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Issue_IssuesDependency" Member="Issue" ThisKey="IssueID" OtherKey="IssueID" Type="Issue" IsForeignKey="true" />
+      <Association Name="Issue_IssuesDependency1" Member="Issue1" ThisKey="DependsOn" OtherKey="IssueID" Type="Issue" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IssueTypes" Member="IssueTypes">
+    <Type Name="IssueType">
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypeName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="IssueType_Issue" Member="Issues" ThisKey="TypeID" OtherKey="TypeID" Type="Issue" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IssueWorkFlow" Member="IssueWorkFlows">
+    <Type Name="IssueWorkFlow">
+      <Column Name="StateID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StateName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="StateRank" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="IssueWorkFlow_Issue" Member="Issues" ThisKey="StateID" OtherKey="StateID" Type="Issue" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MeetingDetails" Member="MeetingDetails">
+    <Type Name="MeetingDetail">
+      <Column Name="MeetingID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EmpID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Yesterday" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Today" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Tomorrow" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Comments" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Employee_MeetingDetail" Member="Employee" ThisKey="EmpID" OtherKey="EmpID" Type="Employee" IsForeignKey="true" />
+      <Association Name="ScrumMeeting_MeetingDetail" Member="ScrumMeeting" ThisKey="MeetingID" OtherKey="MeetingID" Type="ScrumMeeting" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Organization" Member="Organizations">
+    <Type Name="Organization">
+      <Column Name="OrgID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Announcement" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Organization_OrgAttValue" Member="OrgAttValues" ThisKey="OrgID" OtherKey="OrgID" Type="OrgAttValue" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrgAttributes" Member="OrgAttributes">
+    <Type Name="OrgAttribute">
+      <Column Name="OrgAttID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrgAttName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="FieldType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DefaultValue" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CanNull" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RegularExpression" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="OrgAttribute_OrgAttValue" Member="OrgAttValues" ThisKey="OrgAttID" OtherKey="OrgAttID" Type="OrgAttValue" />
+      <Association Name="FieldType_OrgAttribute" Member="FieldType1" ThisKey="FieldType" OtherKey="FieldID" Type="FieldType" IsForeignKey="true" />
+      <Association Name="RegularExpression_OrgAttribute" Member="RegularExpression1" ThisKey="RegularExpression" OtherKey="ExpressionID" Type="RegularExpression" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrgAttValues" Member="OrgAttValues">
+    <Type Name="OrgAttValue">
+      <Column Name="OrgID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OrgAttID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Organization_OrgAttValue" Member="Organization" ThisKey="OrgID" OtherKey="OrgID" Type="Organization" IsForeignKey="true" />
+      <Association Name="OrgAttribute_OrgAttValue" Member="OrgAttribute" ThisKey="OrgAttID" OtherKey="OrgAttID" Type="OrgAttribute" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PersonalNotes" Member="PersonalNotes">
+    <Type Name="PersonalNote">
+      <Column Name="NoteID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmpID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Body" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Employee_PersonalNote" Member="Employee" ThisKey="EmpID" OtherKey="EmpID" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjAttributes" Member="ProjAttributes">
+    <Type Name="ProjAttribute">
+      <Column Name="ProjAttID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjAttName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="FieldType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DefaultValue" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CanNull" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RegularExpression" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsSystemLevel" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="ProjAttribute_ProjAttValue" Member="ProjAttValues" ThisKey="ProjAttID" OtherKey="ProjAttID" Type="ProjAttValue" />
+      <Association Name="FieldType_ProjAttribute" Member="FieldType1" ThisKey="FieldType" OtherKey="FieldID" Type="FieldType" IsForeignKey="true" />
+      <Association Name="RegularExpression_ProjAttribute" Member="RegularExpression1" ThisKey="RegularExpression" OtherKey="ExpressionID" Type="RegularExpression" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjAttValues" Member="ProjAttValues">
+    <Type Name="ProjAttValue">
+      <Column Name="ProjID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProjAttID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="ProjAttribute_ProjAttValue" Member="ProjAttribute" ThisKey="ProjAttID" OtherKey="ProjAttID" Type="ProjAttribute" IsForeignKey="true" />
+      <Association Name="Project_ProjAttValue" Member="Project" ThisKey="ProjID" OtherKey="ProjID" Type="Project" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectRisks" Member="ProjectRisks">
+    <Type Name="ProjectRisk">
+      <Column Name="ProjID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RiskID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Probability" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Impact" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Mitigation" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Project_ProjectRisk" Member="Project" ThisKey="ProjID" OtherKey="ProjID" Type="Project" IsForeignKey="true" />
+      <Association Name="Risk_ProjectRisk" Member="Risk" ThisKey="RiskID" OtherKey="RiskID" Type="Risk" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Projects" Member="Projects">
+    <Type Name="Project">
+      <Column Name="ProjID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Project_Component" Member="Components" ThisKey="ProjID" OtherKey="ProjID" Type="Component" />
+      <Association Name="Project_FavoriteProject" Member="FavoriteProjects" ThisKey="ProjID" OtherKey="ProjID" Type="FavoriteProject" />
+      <Association Name="Project_ProjAttValue" Member="ProjAttValues" ThisKey="ProjID" OtherKey="ProjID" Type="ProjAttValue" />
+      <Association Name="Project_ProjectRisk" Member="ProjectRisks" ThisKey="ProjID" OtherKey="ProjID" Type="ProjectRisk" />
+      <Association Name="Project_ProjectsBacklog" Member="ProjectsBacklogs" ThisKey="ProjID" OtherKey="ProjID" Type="ProjectsBacklog" />
+      <Association Name="Project_Sprint" Member="Sprints" ThisKey="ProjID" OtherKey="ProjID" Type="Sprint" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectsBacklog" Member="ProjectsBacklogs">
+    <Type Name="ProjectsBacklog">
+      <Column Name="ProjID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IssueID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Issue_ProjectsBacklog" Member="Issue" ThisKey="IssueID" OtherKey="IssueID" Type="Issue" IsForeignKey="true" />
+      <Association Name="Project_ProjectsBacklog" Member="Project" ThisKey="ProjID" OtherKey="ProjID" Type="Project" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RegularExpressions" Member="RegularExpressions">
+    <Type Name="RegularExpression">
+      <Column Name="ExpressionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExpressionName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Error" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="RegularExpression_CompAttribute" Member="CompAttributes" ThisKey="ExpressionID" OtherKey="RegularExpression" Type="CompAttribute" />
+      <Association Name="RegularExpression_EmpAttribute" Member="EmpAttributes" ThisKey="ExpressionID" OtherKey="RegularExpression" Type="EmpAttribute" />
+      <Association Name="RegularExpression_IssueAttribute" Member="IssueAttributes" ThisKey="ExpressionID" OtherKey="RegularExpression" Type="IssueAttribute" />
+      <Association Name="RegularExpression_OrgAttribute" Member="OrgAttributes" ThisKey="ExpressionID" OtherKey="RegularExpression" Type="OrgAttribute" />
+      <Association Name="RegularExpression_ProjAttribute" Member="ProjAttributes" ThisKey="ExpressionID" OtherKey="RegularExpression" Type="ProjAttribute" />
+      <Association Name="RegularExpression_SprintAttribute" Member="SprintAttributes" ThisKey="ExpressionID" OtherKey="RegularExpression" Type="SprintAttribute" />
+      <Association Name="RegularExpression_SubCompAttribute" Member="SubCompAttributes" ThisKey="ExpressionID" OtherKey="RegularExpression" Type="SubCompAttribute" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RiskCategories" Member="RiskCategories">
+    <Type Name="RiskCategory">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="RiskCategory_Risk" Member="Risks" ThisKey="CategoryID" OtherKey="Category" Type="Risk" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Risks" Member="Risks">
+    <Type Name="Risk">
+      <Column Name="RiskID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Category" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OrganizationLevel" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Risk_ProjectRisk" Member="ProjectRisks" ThisKey="RiskID" OtherKey="RiskID" Type="ProjectRisk" />
+      <Association Name="RiskCategory_Risk" Member="RiskCategory" ThisKey="Category" OtherKey="CategoryID" Type="RiskCategory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RoleRights" Member="RoleRights">
+    <Type Name="RoleRight">
+      <Column Name="RoleID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RightID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="AccessRight_RoleRight" Member="AccessRight" ThisKey="RightID" OtherKey="RightID" Type="AccessRight" IsForeignKey="true" />
+      <Association Name="Role_RoleRight" Member="Role" ThisKey="RoleID" OtherKey="RoleID" Type="Role" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Roles" Member="Roles">
+    <Type Name="Role">
+      <Column Name="RoleID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="Role_RoleRight" Member="RoleRights" ThisKey="RoleID" OtherKey="RoleID" Type="RoleRight" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ScrumMeetings" Member="ScrumMeetings">
+    <Type Name="ScrumMeeting">
+      <Column Name="MeetingID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SprintID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="MeetingDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="ScrumMeeting_MeetingDetail" Member="MeetingDetails" ThisKey="MeetingID" OtherKey="MeetingID" Type="MeetingDetail" />
+      <Association Name="Sprint_ScrumMeeting" Member="Sprint" ThisKey="SprintID" OtherKey="SprintID" Type="Sprint" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SearchFilters" Member="SearchFilters">
+    <Type Name="SearchFilter">
+      <Column Name="FilterID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FilterName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="EmpID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="Employee_SearchFilter" Member="Employee" ThisKey="EmpID" OtherKey="EmpID" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SprintAttributes" Member="SprintAttributes">
+    <Type Name="SprintAttribute">
+      <Column Name="SprintAttID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SprintAttName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="FieldType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DefaultValue" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CanNull" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RegularExpression" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsSystemLevel" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="SprintAttribute_SprintAttValue" Member="SprintAttValues" ThisKey="SprintAttID" OtherKey="SprintAttID" Type="SprintAttValue" />
+      <Association Name="FieldType_SprintAttribute" Member="FieldType1" ThisKey="FieldType" OtherKey="FieldID" Type="FieldType" IsForeignKey="true" />
+      <Association Name="RegularExpression_SprintAttribute" Member="RegularExpression1" ThisKey="RegularExpression" OtherKey="ExpressionID" Type="RegularExpression" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SprintAttValues" Member="SprintAttValues">
+    <Type Name="SprintAttValue">
+      <Column Name="SprintID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SprintAttID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="SprintAttribute_SprintAttValue" Member="SprintAttribute" ThisKey="SprintAttID" OtherKey="SprintAttID" Type="SprintAttribute" IsForeignKey="true" />
+      <Association Name="Sprint_SprintAttValue" Member="Sprint" ThisKey="SprintID" OtherKey="SprintID" Type="Sprint" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SprintDailyEffort" Member="SprintDailyEfforts">
+    <Type Name="SprintDailyEffort">
+      <Column Name="SprintID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Day" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="WorkDone" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="Sprint_SprintDailyEffort" Member="Sprint" ThisKey="SprintID" OtherKey="SprintID" Type="Sprint" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sprints" Member="Sprints">
+    <Type Name="Sprint">
+      <Column Name="SprintID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="Sprint_ScrumMeeting" Member="ScrumMeetings" ThisKey="SprintID" OtherKey="SprintID" Type="ScrumMeeting" />
+      <Association Name="Sprint_SprintAttValue" Member="SprintAttValues" ThisKey="SprintID" OtherKey="SprintID" Type="SprintAttValue" />
+      <Association Name="Sprint_SprintDailyEffort" Member="SprintDailyEfforts" ThisKey="SprintID" OtherKey="SprintID" Type="SprintDailyEffort" />
+      <Association Name="Sprint_SprintsBacklog" Member="SprintsBacklogs" ThisKey="SprintID" OtherKey="SprintID" Type="SprintsBacklog" />
+      <Association Name="Project_Sprint" Member="Project" ThisKey="ProjID" OtherKey="ProjID" Type="Project" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SprintsBacklog" Member="SprintsBacklogs">
+    <Type Name="SprintsBacklog">
+      <Column Name="SprintID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IssueID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Issue_SprintsBacklog" Member="Issue" ThisKey="IssueID" OtherKey="IssueID" Type="Issue" IsForeignKey="true" />
+      <Association Name="Sprint_SprintsBacklog" Member="Sprint" ThisKey="SprintID" OtherKey="SprintID" Type="Sprint" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SubCompAttributes" Member="SubCompAttributes">
+    <Type Name="SubCompAttribute">
+      <Column Name="SubCompAttID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SubCompAttName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="FieldType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DefaultValue" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CanNull" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RegularExpression" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsSystemLevel" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="SubCompAttribute_SubCompAttValue" Member="SubCompAttValues" ThisKey="SubCompAttID" OtherKey="SubCompAttID" Type="SubCompAttValue" />
+      <Association Name="FieldType_SubCompAttribute" Member="FieldType1" ThisKey="FieldType" OtherKey="FieldID" Type="FieldType" IsForeignKey="true" />
+      <Association Name="RegularExpression_SubCompAttribute" Member="RegularExpression1" ThisKey="RegularExpression" OtherKey="ExpressionID" Type="RegularExpression" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SubCompAttValues" Member="SubCompAttValues">
+    <Type Name="SubCompAttValue">
+      <Column Name="SubCompID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SubCompAttID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="SubCompAttribute_SubCompAttValue" Member="SubCompAttribute" ThisKey="SubCompAttID" OtherKey="SubCompAttID" Type="SubCompAttribute" IsForeignKey="true" />
+      <Association Name="SubComponent_SubCompAttValue" Member="SubComponent" ThisKey="SubCompID" OtherKey="SubCompID" Type="SubComponent" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SubComponents" Member="SubComponents">
+    <Type Name="SubComponent">
+      <Column Name="SubCompID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="SubComponent_SubCompAttValue" Member="SubCompAttValues" ThisKey="SubCompID" OtherKey="SubCompID" Type="SubCompAttValue" />
+      <Association Name="Component_SubComponent" Member="Component" ThisKey="CompID" OtherKey="CompID" Type="Component" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

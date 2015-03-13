@@ -1,0 +1,191 @@
+﻿<error errorId="83889ab1-7306-4794-928e-24acfef5119f" host="INSPIRON-1564" type="System.InvalidOperationException" message="Sequence contains no elements" source="System.Data.Linq" detail="System.InvalidOperationException: Sequence contains no elements&#xD;&#xA;   at System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)&#xD;&#xA;   at System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)&#xD;&#xA;   at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)&#xD;&#xA;   at System.Data.Linq.DataQuery`1.System.Linq.IQueryProvider.Execute[S](Expression expression)&#xD;&#xA;   at System.Linq.Queryable.First[TSource](IQueryable`1 source)&#xD;&#xA;   at Domain.Repository.Concrete.SqlProjectRepository.SearchProject(Int32 pFieldID, String pFieldValue) in C:\Users\ahsan\Documents\Visual Studio 2010\Projects\APM Tool\Back up\APM Tool\Domain\Repository\Concrete\SqlProjectRepository.cs:line 316&#xD;&#xA;   at UserInterface.Controllers.ProjectController.SearchProject(Int32 pFieldID, String pSearchValue) in C:\Users\ahsan\Documents\Visual Studio 2010\Projects\APM Tool\Back up\APM Tool\UserInterface\Controllers\ProjectController.cs:line 409&#xD;&#xA;   at lambda_method(Closure , ControllerBase , Object[] )&#xD;&#xA;   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)&#xD;&#xA;   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClassd.&lt;InvokeActionMethodWithFilters&gt;b__a()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClassd.&lt;&gt;c__DisplayClassf.&lt;InvokeActionMethodWithFilters&gt;b__c()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)&#xD;&#xA;   at System.Web.Mvc.Controller.ExecuteCore()&#xD;&#xA;   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClass8.&lt;BeginProcessRequest&gt;b__4()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass1.&lt;MakeVoidDelegate&gt;b__0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass8`1.&lt;BeginSynchronous&gt;b__7(IAsyncResult _)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" time="2011-03-10T19:22:56.4824000Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:Keep-Alive, TE&#xD;&#xA;HTTP_CONTENT_LENGTH:26&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded&#xD;&#xA;HTTP_ACCEPT:text/html, */*&#xD;&#xA;HTTP_ACCEPT_CHARSET:iso-8859-1, utf-8, utf-16, *;q=0.1&#xD;&#xA;HTTP_ACCEPT_ENCODING:deflate, gzip, x-gzip, identity, *;q=0&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.9&#xD;&#xA;HTTP_COOKIE:ASP.NET_SessionId=ecwkgijkxtndxhcilf3rgiwt&#xD;&#xA;HTTP_HOST:localhost:49203&#xD;&#xA;HTTP_REFERER:http://localhost:49203/Project/ProjectTabs&#xD;&#xA;HTTP_TE:deflate, gzip, chunked, identity, trailers&#xD;&#xA;HTTP_USER_AGENT:Opera/9.80 (Windows NT 6.1; U; en) Presto/2.7.62 Version/11.00&#xD;&#xA;HTTP_COOKIE2:$Version=1&#xD;&#xA;HTTP_X_REQUESTED_WITH:XMLHttpRequest&#xD;&#xA;HTTP_CONTENT_TRANSFER_ENCODING:binary&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: Keep-Alive, TE&#xD;&#xA;Content-Length: 26&#xD;&#xA;Content-Type: application/x-www-form-urlencoded&#xD;&#xA;Accept: text/html, */*&#xD;&#xA;Accept-Charset: iso-8859-1, utf-8, utf-16, *;q=0.1&#xD;&#xA;Accept-Encoding: deflate, gzip, x-gzip, identity, *;q=0&#xD;&#xA;Accept-Language: en-US,en;q=0.9&#xD;&#xA;Cookie: ASP.NET_SessionId=ecwkgijkxtndxhcilf3rgiwt&#xD;&#xA;Host: localhost:49203&#xD;&#xA;Referer: http://localhost:49203/Project/ProjectTabs&#xD;&#xA;TE: deflate, gzip, chunked, identity, trailers&#xD;&#xA;User-Agent: Opera/9.80 (Windows NT 6.1; U; en) Presto/2.7.62 Version/11.00&#xD;&#xA;Cookie2: $Version=1&#xD;&#xA;X-Requested-With: XMLHttpRequest&#xD;&#xA;Content-Transfer-Encoding: binary&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\Users\ahsan\Documents\Visual Studio 2010\Projects\APM Tool\Back up\APM Tool\UserInterface\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="Inspiron-1564\ahsan" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="26" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="" />
+    </item>
+    <item name="HTTPS">
+      <value string="" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Project/SearchProject" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\Users\ahsan\Documents\Visual Studio 2010\Projects\APM Tool\Back up\APM Tool\UserInterface\Project\SearchProject" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Project/SearchProject" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="49203" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="" />
+    </item>
+    <item name="URL">
+      <value string="/Project/SearchProject" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="Keep-Alive, TE" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="26" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html, */*" />
+    </item>
+    <item name="HTTP_ACCEPT_CHARSET">
+      <value string="iso-8859-1, utf-8, utf-16, *;q=0.1" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="deflate, gzip, x-gzip, identity, *;q=0" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.9" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="ASP.NET_SessionId=ecwkgijkxtndxhcilf3rgiwt" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:49203" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:49203/Project/ProjectTabs" />
+    </item>
+    <item name="HTTP_TE">
+      <value string="deflate, gzip, chunked, identity, trailers" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Opera/9.80 (Windows NT 6.1; U; en) Presto/2.7.62 Version/11.00" />
+    </item>
+    <item name="HTTP_COOKIE2">
+      <value string="$Version=1" />
+    </item>
+    <item name="HTTP_X_REQUESTED_WITH">
+      <value string="XMLHttpRequest" />
+    </item>
+    <item name="HTTP_CONTENT_TRANSFER_ENCODING">
+      <value string="binary" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="pFieldID">
+      <value string="0" />
+    </item>
+    <item name="pSearchValue">
+      <value string="10" />
+    </item>
+  </form>
+  <cookies>
+    <item name="ASP.NET_SessionId">
+      <value string="ecwkgijkxtndxhcilf3rgiwt" />
+    </item>
+  </cookies>
+</error>

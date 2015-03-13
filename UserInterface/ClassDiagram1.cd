@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="UserInterface.Controllers.BaseController">
+    <Position X="11.25" Y="21.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAAQgACgACEAAAAIAACAgBACAwBAAAEQAkAAAIEAA=</HashCode>
+      <FileName>Controllers\BaseController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface.Controllers.ComponentController">
+    <Position X="6.75" Y="32.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AgAQAAAEAQAAAAAAAIAwggAADAAAAAkAAEAAQAAABAA=</HashCode>
+      <FileName>Controllers\ComponentController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface.Controllers.EmployeeController">
+    <Position X="15.5" Y="32.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>CAAQAEgACgAAgIBgAgEwggAEBAAAAAUABAACQRAAAAA=</HashCode>
+      <FileName>Controllers\EmployeeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface.Controllers.HomeController">
+    <Position X="21.75" Y="33.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAgAAAAAIBEAAABAQgCIAAAABAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface.Controllers.IssueController">
+    <Position X="0.5" Y="33" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>wAAQMAoABxQAgAEgAAA4ggAQBMEAYAUAgABAYAAQDCA=</HashCode>
+      <FileName>Controllers\IssueController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface.Controllers.NavigationController">
+    <Position X="9.75" Y="32.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAgCgAAAAAgAAAAAAACAAAAAQAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Controllers\NavigationController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface.Controllers.OrganizationController">
+    <Position X="18.5" Y="32.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>UAAAAAAABAFAAABAoAAAAAAAAgAAIACIAABAAAAhDAA=</HashCode>
+      <FileName>Controllers\OrganizationController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface.Controllers.ProjectController">
+    <Position X="24" Y="34.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AgAQAAQAaQAAAgAQAMA4ogAABAAAAAEAgABAQCABDAA=</HashCode>
+      <FileName>Controllers\ProjectController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface.Controllers.SprintController">
+    <Position X="3.75" Y="33.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAARoASACQAAwIAAAAAwgsAUFEAAAAGApAAAQACYABA=</HashCode>
+      <FileName>Controllers\SprintController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface.Controllers.ControllerFactory.SubComponentController">
+    <Position X="12.25" Y="32.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAQQAAAABAAADAAAAAAQwgAABABAAAEAgAAAQAAAAAA=</HashCode>
+      <FileName>Controllers\SubComponentController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.Repository.Concrete.SqlComponentRepository">
+    <Position X="21" Y="7.25" Width="2" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Domain.Repository.Concrete.SqlEmployeeRepository" BaseTypeListCollapsed="true">
+    <Position X="15.5" Y="11" Width="2.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Domain.Repository.Concrete.SqlIssueRepository" BaseTypeListCollapsed="true">
+    <Position X="12" Y="12" Width="2.75" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Domain.Repository.Concrete.SqlOrganizationRepository" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="8.5" Width="2" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Domain.Repository.Concrete.SqlProjectRepository" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="9.25" Width="1.75" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Domain.Repository.Concrete.SqlSprintRepository" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="10" Width="2" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Domain.Repository.Concrete.SqlSubComponentRepository" BaseTypeListCollapsed="true">
+    <Position X="3.5" Y="6.75" Width="2.25" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="Domain.Repository.Abstract.IComponentRepository">
+    <Position X="21" Y="3.25" Width="1.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Domain.Repository.Abstract.IEmployeeRepository">
+    <Position X="15.5" Y="3.75" Width="2.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Domain.Repository.Abstract.IIssueRepository">
+    <Position X="12" Y="3.5" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Domain.Repository.Abstract.IOrganizationRepository">
+    <Position X="6.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Domain.Repository.Abstract.IProjectRepository">
+    <Position X="18.75" Y="3.5" Width="1.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Domain.Repository.Abstract.ISprintRepository">
+    <Position X="9.25" Y="3.25" Width="1.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Domain.Repository.Abstract.ISubComponentRepository">
+    <Position X="3.5" Y="3.25" Width="2" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

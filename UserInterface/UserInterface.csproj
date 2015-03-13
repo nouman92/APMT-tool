@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B881840D-8BCF-41AB-8973-8CA3FD2D1FB3}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UserInterface</RootNamespace>
+    <AssemblyName>UserInterface</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+      </Objects>
+    </PublishDatabaseSettings>
+    <PackageAsSingleFile>true</PackageAsSingleFile>
+    <DeployIisAppPath>APMT/UserInterface_deploy</DeployIisAppPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+      </Objects>
+    </PublishDatabaseSettings>
+    <ExcludeApp_Data>false</ExcludeApp_Data>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Elmah, Version=1.2.13202.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External DLLs\ELMAH 1.2\net-2.0\Release\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleChartSharp">
+      <HintPath>E:\New folder\GoogleChartSharp-1.0.2\GoogleChartSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\External DLLs\Ninject-2.0.0.0-release-net-3.5\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\ComponentController.cs" />
+    <Compile Include="Controllers\ControllerFactory\NinjectControllerFactory.cs" />
+    <Compile Include="Controllers\SearchFilterController.cs" />
+    <Compile Include="Controllers\SubComponentController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IssueController.cs" />
+    <Compile Include="Controllers\NavigationController.cs" />
+    <Compile Include="Controllers\OrganizationController.cs" />
+    <Compile Include="Controllers\ProjectController.cs" />
+    <Compile Include="Controllers\SprintController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HtmlHelpers\ControlRenderHelper.cs" />
+    <Compile Include="Models\ControlInfo.cs" />
+    <Compile Include="Models\CustomControlsInfo.cs" />
+    <Compile Include="Models\LogInViewModel.cs" />
+    <Compile Include="Models\NavigationLink.cs" />
+    <Compile Include="Models\RenderedControlsInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\CustomRoleProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bg.gif" />
+    <Content Include="Content\boder.png" />
+    <Content Include="Content\images\bg.gif" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\ui-bg_diagonals-small_70_aaaaaa_40x40.png" />
+    <Content Include="Content\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\images\ui-bg_flat_15_888888_40x100.png" />
+    <Content Include="Content\images\ui-bg_flat_15_a9a7a7_40x100.png" />
+    <Content Include="Content\images\ui-bg_flat_95_ea0000_40x100.png" />
+    <Content Include="Content\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\images\ui-bg_gloss-wave_16_121212_500x100.png" />
+    <Content Include="Content\images\ui-bg_gloss-wave_16_353535_500x100.png" />
+    <Content Include="Content\images\ui-bg_gloss-wave_16_6a6868_500x100.png" />
+    <Content Include="Content\images\ui-bg_highlight-hard_15_888888_1x100.png" />
+    <Content Include="Content\images\ui-bg_highlight-hard_55_555555_1x100.png" />
+    <Content Include="Content\images\ui-bg_highlight-soft_35_adadad_1x100.png" />
+    <Content Include="Content\images\ui-bg_highlight-soft_35_c9c9c9_1x100.png" />
+    <Content Include="Content\images\ui-bg_highlight-soft_60_dddddd_1x100.png" />
+    <Content Include="Content\images\ui-bg_inset-hard_0_aaaaaa_1x100.png" />
+    <Content Include="Content\images\ui-bg_inset-soft_15_121212_1x100.png" />
+    <Content Include="Content\images\ui-bg_inset-soft_15_353535_1x100.png" />
+    <Content Include="Content\images\ui-bg_inset-soft_15_6a6868_1x100.png" />
+    <Content Include="Content\images\ui-icons_292929_256x240.png" />
+    <Content Include="Content\images\ui-icons_666666_256x240.png" />
+    <Content Include="Content\images\ui-icons_aaaaaa_256x240.png" />
+    <Content Include="Content\images\ui-icons_bbbbbb_256x240.png" />
+    <Content Include="Content\images\ui-icons_c98000_256x240.png" />
+    <Content Include="Content\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="Content\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\images\ui-icons_f29a00_256x240.png" />
+    <Content Include="Content\jqdialog.css" />
+    <Content Include="Content\jquery-ui-1.8.9.custom.css" />
+    <Content Include="Content\jquery.ui.accordion.css" />
+    <Content Include="Content\jquery.ui.all.css" />
+    <Content Include="Content\jquery.ui.autocomplete.css" />
+    <Content Include="Content\jquery.ui.base.css" />
+    <Content Include="Content\jquery.ui.button.css" />
+    <Content Include="Content\jquery.ui.core.css" />
+    <Content Include="Content\jquery.ui.datepicker.css" />
+    <Content Include="Content\jquery.ui.dialog.css" />
+    <Content Include="Content\jquery.ui.progressbar.css" />
+    <Content Include="Content\jquery.ui.resizable.css" />
+    <Content Include="Content\jquery.ui.selectable.css" />
+    <Content Include="Content\jquery.ui.slider.css" />
+    <Content Include="Content\jquery.ui.tabs.css" />
+    <Content Include="Content\jquery.ui.theme.css" />
+    <Content Include="Content\Tabs.css" />
+    <Content Include="Errors\Generic.htm" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\jqdialog.min.js" />
+    <Content Include="Scripts\jquery-1.5.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.9.custom.min.js" />
+    <Content Include="Scripts\jquery.tablesorter.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Views\Component\CreateComponent.aspx" />
+    <Content Include="Views\Component\CreateComponentTabs.aspx" />
+    <Content Include="Views\Component\CreateCustomField.aspx" />
+    <Content Include="Views\Component\CustomFields.aspx" />
+    <Content Include="Views\Component\DisplayComponent.aspx" />
+    <Content Include="Views\Component\DisplayFieldInfo.aspx" />
+    <Content Include="Views\Component\EditComponent.aspx" />
+    <Content Include="Views\Component\EditFieldInfo.aspx" />
+    <Content Include="Views\Component\MoreActionsTabs.aspx" />
+    <Content Include="Views\Component\ProjectComponents.aspx" />
+    <Content Include="Views\Component\SearchComponent.ascx" />
+    <Content Include="Views\Component\SearchField.ascx" />
+    <Content Include="Views\Employee\ChangePassword.aspx" />
+    <Content Include="Views\Employee\CreateCustomField.aspx" />
+    <Content Include="Views\Employee\AddEmployee.aspx" />
+    <Content Include="Views\Employee\AddEmployeeTabs.aspx" />
+    <Content Include="Views\Employee\CreateNote.aspx" />
+    <Content Include="Views\Employee\CustomFields.aspx" />
+    <Content Include="Views\Employee\DisplayFieldInfo.aspx" />
+    <Content Include="Views\Employee\DisplayEmployee.aspx" />
+    <Content Include="Views\Employee\DisplayNote.aspx" />
+    <Content Include="Views\Employee\EditFieldInfo.aspx" />
+    <Content Include="Views\Employee\EditEmployee.aspx" />
+    <Content Include="Views\Employee\EditNote.aspx" />
+    <Content Include="Views\Employee\EditProfile.aspx" />
+    <Content Include="Views\Employee\EmployeeTabs.aspx" />
+    <Content Include="Views\Employee\MoreActionsTabs.aspx" />
+    <Content Include="Views\Employee\ResetUserPassword.aspx" />
+    <Content Include="Views\Employee\SearchField.ascx" />
+    <Content Include="Views\Employee\SearchEmployee.aspx" />
+    <Content Include="Views\Employee\SearchResult.aspx" />
+    <Content Include="Views\Employee\ShowAllEmployees.aspx" />
+    <Content Include="Views\Employee\UserProfileTabs.aspx" />
+    <Content Include="Views\Employee\ViewProfile.aspx" />
+    <Content Include="Views\Home\FavoriteProjects.aspx" />
+    <Content Include="Views\Home\LogIn.aspx" />
+    <Content Include="Views\Home\PersonalNotes.aspx" />
+    <Content Include="Views\Home\UserAssignedIssues.aspx" />
+    <Content Include="Views\Home\HomeTabs.aspx" />
+    <Content Include="Views\Issue\CreateCustomField.aspx" />
+    <Content Include="Views\Issue\CreateIssue.aspx" />
+    <Content Include="Views\Issue\CreateIssueTabs.aspx" />
+    <Content Include="Views\Issue\CustomFields.aspx" />
+    <Content Include="Views\Issue\DisplayFieldInfo.aspx" />
+    <Content Include="Views\Issue\DisplayIssue.aspx" />
+    <Content Include="Views\Issue\EditFieldInfo.aspx" />
+    <Content Include="Views\Issue\EditIssue.aspx" />
+    <Content Include="Views\Issue\FilterIssueListOptions.ascx" />
+    <Content Include="Views\Issue\IssueAssignee.aspx" />
+    <Content Include="Views\Issue\IssueDependency.aspx" />
+    <Content Include="Views\Issue\IssueTabs.aspx" />
+    <Content Include="Views\Issue\MoreActionsTabs.aspx" />
+    <Content Include="Views\Issue\RenameState.ascx" />
+    <Content Include="Views\Issue\SearchField.ascx" />
+    <Content Include="Views\Issue\SearchIssue.ascx" />
+    <Content Include="Views\Issue\ShowAllIssues.ascx" />
+    <Content Include="Views\Issue\WorkFlow.aspx" />
+    <Content Include="Views\Navigation\RenderMenu.ascx" />
+    <Content Include="Views\Organization\AddRisk.aspx" />
+    <Content Include="Views\Organization\AddRole.aspx" />
+    <Content Include="Views\Organization\Announcement.aspx" />
+    <Content Include="Views\Organization\DisplayRiskList.aspx" />
+    <Content Include="Views\Organization\EditOrganizationInfo.aspx" />
+    <Content Include="Views\Organization\EditRisk.aspx" />
+    <Content Include="Views\Organization\EditRole.aspx" />
+    <Content Include="Views\Organization\OrganizationInfo.aspx" />
+    <Content Include="Views\Organization\OrganizationTabs.aspx" />
+    <Content Include="Views\Organization\RiskList.ascx" />
+    <Content Include="Views\Organization\Roles.aspx" />
+    <Content Include="Views\Project\AddRisks.aspx" />
+    <Content Include="Views\Project\CreateProject.aspx" />
+    <Content Include="Views\Project\CreateCustomField.aspx" />
+    <Content Include="Views\Project\CreateProjectTabs.aspx" />
+    <Content Include="Views\Project\DisplayFieldInfo.aspx" />
+    <Content Include="Views\Project\DisplayProject.aspx" />
+    <Content Include="Views\Project\DisplayProjectRisk.aspx" />
+    <Content Include="Views\Project\EditFieldInfo.aspx" />
+    <Content Include="Views\Project\EditProject.aspx" />
+    <Content Include="Views\Project\CustomFields.aspx" />
+    <Content Include="Views\Project\EditProjectRisk.aspx" />
+    <Content Include="Views\Project\MoreActionsTabs.aspx" />
+    <Content Include="Views\Project\NewRisk.aspx" />
+    <Content Include="Views\Project\ProjectBacklog.aspx" />
+    <Content Include="Views\Project\ProjectRisks.aspx" />
+    <Content Include="Views\Project\ShowActiveProjects.aspx" />
+    <Content Include="Views\Project\ProjectTabs.aspx" />
+    <Content Include="Views\Project\SearchField.ascx" />
+    <Content Include="Views\Project\SearchProject.aspx" />
+    <Content Include="Views\Project\SearchResult.aspx" />
+    <Content Include="Views\Project\ShowAllProjects.aspx" />
+    <Content Include="Views\Issue\AddIssueDependency.ascx" />
+    <Content Include="Views\SearchFilter\Attributes.ascx" />
+    <Content Include="Views\SearchFilter\ComponentResult.aspx" />
+    <Content Include="Views\SearchFilter\CreateFilter.aspx" />
+    <Content Include="Views\SearchFilter\EmployeeResult.aspx" />
+    <Content Include="Views\SearchFilter\IssueResult.aspx" />
+    <Content Include="Views\SearchFilter\Match.ascx" />
+    <Content Include="Views\SearchFilter\Operator.ascx" />
+    <Content Include="Views\SearchFilter\ProjectResult.aspx" />
+    <Content Include="Views\SearchFilter\SearchBy.ascx" />
+    <Content Include="Views\SearchFilter\SearchFilterTabs.aspx" />
+    <Content Include="Views\SearchFilter\SprintResult.aspx" />
+    <Content Include="Views\SearchFilter\SubComponentResult.aspx" />
+    <Content Include="Views\SearchFilter\ValueField.ascx" />
+    <Content Include="Views\SearchFilter\DisplayFilters.aspx" />
+    <Content Include="Views\Shared\LoginStatus.ascx" />
+    <Content Include="Views\Sprint\AddIssue.ascx" />
+    <Content Include="Views\Sprint\AssignIssue.ascx" />
+    <Content Include="Views\Sprint\BurndownChart.aspx" />
+    <Content Include="Views\Sprint\CreateCustomField.aspx" />
+    <Content Include="Views\Sprint\CreateSprint.aspx" />
+    <Content Include="Views\Sprint\CreateSprintTabs.aspx" />
+    <Content Include="Views\Sprint\CustomFields.aspx" />
+    <Content Include="Views\Sprint\DisplayFieldInfo.aspx" />
+    <Content Include="Views\Sprint\DisplaySprint.aspx" />
+    <Content Include="Views\Sprint\EditFieldInfo.aspx" />
+    <Content Include="Views\Sprint\EditMeetingDetails.ascx" />
+    <Content Include="Views\Sprint\EditSprint.aspx" />
+    <Content Include="Views\Sprint\MeetingDetails.ascx" />
+    <Content Include="Views\Sprint\MeetingsList.aspx" />
+    <Content Include="Views\Sprint\MoreActionsTabs.aspx" />
+    <Content Include="Views\Sprint\ProjectSprints.aspx" />
+    <Content Include="Views\Sprint\ScrumMeeting.aspx" />
+    <Content Include="Views\Sprint\ScrumMeetingTabs.aspx" />
+    <Content Include="Views\Sprint\SearchField.ascx" />
+    <Content Include="Views\Sprint\SearchSprint.ascx" />
+    <Content Include="Views\Sprint\ShowAllIssues.ascx" />
+    <Content Include="Views\Sprint\SprintBacklog.aspx" />
+    <Content Include="Views\Sprint\SprintTeam.ascx" />
+    <Content Include="Views\SubComponent\CreateCustomField.aspx" />
+    <Content Include="Views\SubComponent\CreateSubComponent.aspx" />
+    <Content Include="Views\SubComponent\CreateSubComponentTabs.aspx" />
+    <Content Include="Views\SubComponent\CustomFields.aspx" />
+    <Content Include="Views\SubComponent\DisplayFieldInfo.aspx" />
+    <Content Include="Views\SubComponent\DisplaySubComponent.aspx" />
+    <Content Include="Views\SubComponent\EditFieldInfo.aspx" />
+    <Content Include="Views\SubComponent\EditSubComponent.aspx" />
+    <Content Include="Views\SubComponent\ListSubComponents.aspx" />
+    <Content Include="Views\SubComponent\SearchField.ascx" />
+    <Content Include="Views\SubComponent\SearchSubComponent.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Tabs.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\TabContent.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{46FACC8A-0340-40AA-A287-536532AF3C9F}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58276</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/UserInterface</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

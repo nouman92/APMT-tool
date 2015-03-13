@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="APMT/UserInterface_deploy" />
+  <setParameter name="CString-Web.config Connection String" value="Data Source=INSPIRON-1564;Initial Catalog=APMT;Integrated Security=True; User Id=; Password=" />
+</parameters>
